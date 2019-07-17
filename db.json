@@ -1,0 +1,29 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "quoteText": "kemal ",
+      "quoteAuthor": "kema l"
+    },
+    {
+      "id": 2,
+      "quoteText": "You can observe a lot just by watching.",
+      "quoteAuthor": "Yogi Berra"
+    },
+    {
+      "id": 3,
+      "quoteText": "A house divided against itself cannot stand.",
+      "quoteAuthor": "Abraham Lincoln"
+    },
+    {
+      "quoteText": "kemal",
+      "quoteAuthor": "emrah",
+      "id": 4
+    },
+    {
+      "quoteText": "Ahmet Kenar dedi ki naber la",
+      "quoteAuthor": "Ahmet Kenar",
+      "id": 5
+    }
+  ]
+}
