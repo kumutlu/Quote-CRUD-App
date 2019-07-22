@@ -23,7 +23,7 @@ const QuoteItem = ({ quote, deleteQuote, setCurrent }) => {
         </a>
         <br />
         <span className="grey-text">
-          <span className="black-text">{quote.quoteAuthor}</span>
+          <span className="black-text">-{quote.quoteAuthor}</span>
         </span>
         <a href="#!" onClick={onDelete} className="secondary-content">
           <i className="material-icons grey-text">delete</i>

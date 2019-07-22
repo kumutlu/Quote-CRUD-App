@@ -2,8 +2,8 @@
   "quotes": [
     {
       "id": 1,
-      "quoteText": "kemal ",
-      "quoteAuthor": "kema l"
+      "quoteText": "Those who dare to fail miserably can achieve greatly.",
+      "quoteAuthor": "John F. Kennedy"
     },
     {
       "id": 2,
@@ -16,14 +16,34 @@
       "quoteAuthor": "Abraham Lincoln"
     },
     {
-      "quoteText": "kemal",
-      "quoteAuthor": "emrah",
-      "id": 4
+      "id": 4,
+      "quoteText": "You only live once, but if you do it right, once is enough. ",
+      "quoteAuthor": "Mae West"
     },
     {
-      "quoteText": "Ahmet Kenar dedi ki naber la",
-      "quoteAuthor": "Ahmet Kenar",
-      "id": 5
+      "id": 5,
+      "quoteText": "Life is what happens when you’re busy making other plans.",
+      "quoteAuthor": "John Lennon"
+    },
+    {
+      "quoteText": "There are several good way to earn money. But Driving Job is the best",
+      "quoteAuthor": "Emrah Y",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "quoteText": "Tu devrais aussi me voir parler en Français ...",
+      "quoteAuthor": "Ahmet K."
+    },
+    {
+      "quoteText": "Be positive man. I know you can do it",
+      "quoteAuthor": "Stefan Q.",
+      "id": 8
+    },
+    {
+      "quoteText": "I believe you. You are all in good progress",
+      "quoteAuthor": "Rein O.",
+      "id": 9
     }
   ]
 }
