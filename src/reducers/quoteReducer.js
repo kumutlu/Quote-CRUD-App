@@ -37,7 +37,7 @@ export default (state = initialState, action) => {
         quotes: state.quotes.filter(quote => quote.id !== action.payload),
         loading: false
       };
-      case UPDATE_QUOTE:
+    case UPDATE_QUOTE:
       return {
         ...state,
         quotes: state.quotes.map(quote =>

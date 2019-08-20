@@ -5,14 +5,11 @@ import Preloader from "../layout/Preloader";
 import PropTypes from "prop-types";
 import { getQuotes } from "../../actions/quoteActions";
 
-
 const Quotes = ({ quote: { quotes, loading }, getQuotes }) => {
-  
   useEffect(() => {
     getQuotes();
   }, [getQuotes]);
 
-  
   if (loading || quotes === null) {
     return <Preloader />;
   }
@@ -31,17 +28,16 @@ const Quotes = ({ quote: { quotes, loading }, getQuotes }) => {
   );
 };
 
-
 Quotes.propTypes = {
-    quote: PropTypes.object.isRequired,
-    getQuotes: PropTypes.func.isRequired
-  };
-  
-  const mapStateToProps = state => ({
-    quote: state.quote
-  });
-  
-  export default connect(
-    mapStateToProps,
-    { getQuotes }
-  )(Quotes);
+  quote: PropTypes.object.isRequired,
+  getQuotes: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => ({
+  quote: state.quote
+});
+
+export default connect(
+  mapStateToProps,
+  { getQuotes }
+)(Quotes);

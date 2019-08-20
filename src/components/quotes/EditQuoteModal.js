@@ -5,20 +5,19 @@ import M from "materialize-css/dist/js/materialize.min.js";
 import { updateQuote } from "../../actions/quoteActions";
 
 const EditQuoteModal = ({ current, updateQuote }) => {
-  const [quoteText, setQuoteText] = useState('');
-  const [quoteAuthor, setQuoteAuthor] = useState('');
+  const [quoteText, setQuoteText] = useState("");
+  const [quoteAuthor, setQuoteAuthor] = useState("");
 
   useEffect(() => {
     if (current) {
       setQuoteText(current.quoteText);
       setQuoteAuthor(current.quoteAuthor);
     }
-    console.log(current)
   }, [current]);
 
   const onSubmit = () => {
-    if (quoteText === '' || quoteAuthor === '') {
-      M.toast({ html: "Please enter a message and tech" });
+    if (quoteText === "" || quoteAuthor === "") {
+      M.toast({ html: "Please enter a Quote and Author" });
     } else {
       const updQuote = {
         id: current.id,
@@ -30,8 +29,8 @@ const EditQuoteModal = ({ current, updateQuote }) => {
       M.toast({ html: "Quote Updated" });
 
       // Clear Fields
-      setQuoteText('');
-      setQuoteAuthor('');
+      setQuoteText("");
+      setQuoteAuthor("");
     }
   };
 
@@ -86,11 +85,10 @@ EditQuoteModal.propTypes = {
 };
 
 const mapStateToProps = state => {
-  console.log(state.quote.current)
   return {
     current: state.quote.current
   };
-} 
+};
 
 export default connect(
   mapStateToProps,

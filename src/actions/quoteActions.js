@@ -7,8 +7,11 @@ import {
   UPDATE_QUOTE,
   SEARCH_QUOTES,
   SET_CURRENT,
-  CLEAR_CURRENT
+  CLEAR_CURRENT,
+  SIGN_IN,
+  SIGN_OUT
 } from "./types";
+import quotes from "../apis/quotes";
 
 // Get QUOTES from server
 export const getQuotes = () => async dispatch => {
@@ -31,23 +34,43 @@ export const getQuotes = () => async dispatch => {
 };
 
 // Add new quote
-export const addQuote = quote => async dispatch => {
+export const addQuote = quote => async (dispatch, getState) => {
   try {
     setLoading();
+    const { userId } = getState().auth;
 
-    const res = await fetch("/quotes", {
-      method: "POST",
-      body: JSON.stringify(quote),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-    const data = await res.json();
+    console.log(userId);
+    const response = await quotes.post("/quotes", { ...quote, userId });
+    console.log(response.data);
 
     dispatch({
       type: ADD_QUOTE,
-      payload: data
+      payload: response.data
     });
+    // const res = await fetch(
+    //   "/quotes",
+    //   {
+    //     method: "POST",
+    //     body: JSON.stringify(quote),
+    //     headers: {
+    //       "Content-Type": "application/json"
+    //     }
+    //   },
+    //   { ...data, userId }
+    // );
+    // const data = res.json();
+
+    // .then(res => res.json())
+    // .then(veri => {
+    //   console.log(veri);
+    //   const data = { ...veri, userId };
+
+    //   // const veri = await res.json();
+    //   console.log(data);
+    //   // const data = { ...veri, userId };
+    //   // console.log(data);
+
+    // });
   } catch (err) {
     dispatch({
       type: QUOTES_ERROR,
@@ -143,5 +166,18 @@ export const clearCurrent = () => {
 export const setLoading = () => {
   return {
     type: SET_LOADING
+  };
+};
+
+export const signIn = userId => {
+  return {
+    type: SIGN_IN,
+    payload: userId
+  };
+};
+
+export const signOut = () => {
+  return {
+    type: SIGN_OUT
   };
 };
