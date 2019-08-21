@@ -20,17 +20,21 @@ const App = () => {
   return (
     <Provider store={store}>
       <Fragment>
-        {/* <Header /> */}
         <SearchBar />
         <div className="right">
           <GoogleAuth />
         </div>
         <div className="container">
-          <AddBtn />
-          <DeleteQuoteModal />
-          <AddQuoteModal />
-          <EditQuoteModal />
-          <Quotes />
+          <div>
+            {" "}
+            <AddBtn />{" "}
+          </div>
+          <div>
+            <DeleteQuoteModal />
+            <AddQuoteModal />
+            <EditQuoteModal />
+            <Quotes />
+          </div>
         </div>
       </Fragment>
     </Provider>

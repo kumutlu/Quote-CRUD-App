@@ -14,17 +14,24 @@ import {
 import quotes from "../apis/quotes";
 
 // Get QUOTES from server
-export const getQuotes = () => async dispatch => {
+export const getQuotes = quote => async dispatch => {
   try {
     setLoading();
 
-    const res = await fetch("/quotes");
-    const data = await res.json();
+    const response = await quotes.get("/quotes", { ...quote });
 
     dispatch({
       type: GET_QUOTES,
-      payload: data
+      payload: response.data
     });
+
+    // const res = await fetch("/quotes");
+    // const data = await res.json();
+
+    // dispatch({
+    //   type: GET_QUOTES,
+    //   payload: data
+    // });
   } catch (err) {
     dispatch({
       type: QUOTES_ERROR,

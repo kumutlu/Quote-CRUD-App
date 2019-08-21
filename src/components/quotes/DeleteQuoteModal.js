@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { deleteQuote, setCurrent } from "../../actions/quoteActions";
@@ -29,12 +29,11 @@ const DeleteQuoteModal = ({ current, quote, deleteQuote }) => {
           <h5>Do You Want to Remove This Quote? </h5>
         </div>
         <br></br>
-        <br></br>
-        <br></br>
+
         <div
           style={{
-            marginRight: "30px",
-            marginLeft: "30px",
+            marginRight: "40px",
+            marginLeft: "40px",
             alignContent: "center"
           }}
         >

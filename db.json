@@ -3,70 +3,80 @@
     {
       "id": 1,
       "quoteText": "Those who dare to fail miserably can achieve greatly.",
-      "quoteAuthor": "John F. Kennedy"
+      "quoteAuthor": "John F. Kennedy",
+      "userId": "116135412926980885031"
     },
     {
       "id": 2,
       "quoteText": "You can observe a lot just by watching.",
-      "quoteAuthor": "Yogi Berra"
+      "quoteAuthor": "Yogi Berra",
+      "userId": "105054488034476342772"
     },
     {
       "id": 3,
       "quoteText": "A house divided against itself cannot stand.",
-      "quoteAuthor": "Abraham Lincoln"
+      "quoteAuthor": "Abraham Lincoln",
+      "userId": "105054488034476342772"
     },
     {
       "id": 4,
       "quoteText": "You only live once, but if you do it right, once is enough. ",
-      "quoteAuthor": "Mae West"
+      "quoteAuthor": "Mae West",
+      "userId": "105054488034476342772"
     },
     {
       "id": 5,
       "quoteText": "Life is what happens when you’re busy making other plans.",
-      "quoteAuthor": "John Lennon"
+      "quoteAuthor": "John Lennon",
+      "userId": "105054488034476342772"
     },
     {
       "quoteText": "There are several good way to earn money. But Driving Job is the best",
       "quoteAuthor": "Emrah Y",
-      "id": 6
+      "id": 6,
+      "userId": "105054488034476342772"
     },
     {
       "id": 7,
       "quoteText": "Tu devrais aussi me voir parler en Français ...",
-      "quoteAuthor": "Ahmet K."
+      "quoteAuthor": "Ahmet K.",
+      "userId": "105054488034476342772"
     },
     {
       "quoteText": "Be positive man. I know you can do it",
       "quoteAuthor": "Stefan Q.",
-      "id": 8
+      "id": 8,
+      "userId": "116135412926980885031"
     },
     {
       "quoteText": "I believe you. You are all in good progress",
       "quoteAuthor": "Rein O.",
-      "id": 9
+      "id": 9,
+      "userId": "116135412926980885031"
     },
     {
       "id": 10,
       "quoteText": "I could not do so much thing",
-      "quoteAuthor": "John Kemal"
+      "quoteAuthor": "John Kemal",
+      "userId": "116135412926980885031"
     },
     {
-      "quoteText": "sfdsadfas",
-      "quoteAuthor": "asdfsadfsadf",
-      "userId": "116135412926980885031",
-      "id": 11
-    },
-    {
-      "quoteText": "asDAsd",
-      "quoteAuthor": "asdaSD",
+      "quoteText": "You cannot shake hands with a clenched fist. ",
+      "quoteAuthor": "Indira Gandhi",
       "userId": "116135412926980885031",
       "id": 12
     },
     {
-      "quoteText": "sadfasdf",
-      "quoteAuthor": "asdfasdfasdf",
+      "quoteText": "kemal ",
+      "quoteAuthor": "oguz",
       "userId": "105054488034476342772",
       "id": 13
+    },
+    {
+      "quoteText": "try ",
+      "quoteAuthor": "trt2",
+      "userId": "116135412926980885031",
+      "id": 14
     }
   ]
 }
