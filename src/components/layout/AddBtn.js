@@ -1,27 +1,33 @@
-import React from 'react';
+import React from "react";
+import { connect } from "react-redux";
+import { setCurrent } from "../../actions/quoteActions";
 
-const AddBtn = () => {
-  return (
-    <div className='fixed-action-btn'>
-      <a
-        href='#!'
-        className='btn-floating btn-large blue darken-2 modal-trigger'
-      >
-        <i className='large material-icons'>add</i>
-      </a>
-      <ul>
-        <li>
+const AddBtn = ({ isSignedIn }) => {
+  const renderAddBtn = () => {
+    if (isSignedIn) {
+      return (
+        <div className="fixed-action-btn">
           <a
-            href='#add-quote-modal'
-            className='btn-floating green modal-trigger'
+            href="#add-quote-modal"
+            className="btn-floating btn-large blue darken-2 modal-trigger"
           >
-            <i className='material-icons'>format_quote</i>
+            <i className="large material-icons">add</i>
           </a>
-        </li>
-        
-      </ul>
-    </div>
-  );
+        </div>
+      );
+    }
+  };
+
+  return <div>{renderAddBtn()}</div>;
 };
 
-export default AddBtn;
+const mapStateToProps = state => {
+  return {
+    isSignedIn: state.auth.isSignedIn
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { setCurrent }
+)(AddBtn);

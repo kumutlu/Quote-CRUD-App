@@ -1,33 +1,44 @@
 import React from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { deleteQuote, setCurrent } from '../../actions/quoteActions';
+import { setCurrent } from "../../actions/quoteActions";
 
-import M from "materialize-css/dist/js/materialize.min.js";
-
-const QuoteItem = ({ quote, deleteQuote, setCurrent }) => {
-  const onDelete = () => {
-    deleteQuote(quote.id);
-    M.toast({ html: "Quote Deleted" });
+const QuoteItem = ({ quote, setCurrent, currentUserId }) => {
+  const renderAdmin = quote => {
+    if (quote.userId === currentUserId) {
+      return (
+        <div className="right">
+          <a
+            href="#edit-quote-modal"
+            onClick={() => setCurrent(quote)}
+            className="modal-trigger"
+          >
+            <i className="material-icons grey-text">edit </i>
+          </a>
+          <a
+            href="#delete-quote-modal"
+            onClick={() => setCurrent(quote)}
+            className="modal-trigger"
+          >
+            <i className="material-icons grey-text">delete </i>
+          </a>
+        </div>
+      );
+    }
   };
 
   return (
     <li className="collection-item">
       <div>
-        <a
-          href="#edit-quote-modal"
-          className= "modal-trigger"
-          onClick={() => setCurrent(quote)}
-        >
-          "{quote.quoteText}"
-        </a>
+        <span className="grey-text">
+          <span className="blue-text">"{quote.quoteText}"</span>
+        </span>
         <br />
         <span className="grey-text">
           <span className="black-text">-{quote.quoteAuthor}</span>
         </span>
-        <a href="#!" onClick={onDelete} className="secondary-content">
-          <i className="material-icons grey-text">delete</i>
-        </a>
+
+        {renderAdmin(quote)}
       </div>
     </li>
   );
@@ -35,12 +46,16 @@ const QuoteItem = ({ quote, deleteQuote, setCurrent }) => {
 
 QuoteItem.propTypes = {
   quote: PropTypes.object.isRequired,
-  deleteQuote: PropTypes.func.isRequired,
   setCurrent: PropTypes.func.isRequired
 };
 
-
+const mapStateToProps = state => {
+  return {
+    quotes: state.quotes,
+    currentUserId: state.auth.userId
+  };
+};
 export default connect(
-  null,
-  { deleteQuote, setCurrent }
+  mapStateToProps,
+  { setCurrent }
 )(QuoteItem);
